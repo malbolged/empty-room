@@ -8,7 +8,7 @@ In February 2015 an office in Mons, Belgium recorded its light, CO₂, temperatu
 
 1. **TabPFN learns what a person does to a room.** It sees thousands of labelled minutes and works out what a body looks like in the sensors: breath raising the CO₂, a hand on the light switch, warmth. Time of day is hidden from it, so it judges presence only from the physics.
 2. **Then it listens to the empty minutes.** Each day is scored by a model that never saw that day. Minutes the log calls *empty* but the model calls *occupied* are presences nobody signed in for. Runs of them become **apparitions**.
-3. **The Medium speaks for each one.** Gemma 4, running locally through Ollama, writes the presence's testimony in the first person, using only the numbers in the evidence.
+3. **The Medium speaks for each one.** Gemma 4, running locally through LM Studio, writes the presence's testimony in the first person, using only the numbers in the evidence.
 4. **The Skeptic tries to explain it away.** The same local Gemma becomes a tool-using agent. It checks the sun's position over Mons, pulls that day's cloud cover from the Open-Meteo archive, re-asks TabPFN with one clue taken away (*would it still look like a person without the light?*), searches the web through SerpApi, and returns a verdict: **DEBUNKED** (nobody was there), **LIVING** (somebody was, and the log forgot them) or **UNEXPLAINED**.
 5. **Everything is read aloud and traced.** ElevenLabs voices the presence and the Skeptic. Sentry traces every agent run, model call and tool call, with latency and token counts.
 
