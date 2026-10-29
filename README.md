@@ -2,6 +2,8 @@
 
 *A séance over a sensor log.*
 
+**Case archive:** https://empty-room-6z2k.onrender.com/
+
 In February 2015 an office in Mons, Belgium recorded its light, CO₂, temperature and humidity once a minute, while a camera took a picture each minute to record whether anyone was inside. That log ([UCI Occupancy Detection](https://archive.ics.uci.edu/dataset/357/occupancy+detection)) has been a machine-learning benchmark for ten years. This project reads it as a ghost story.
 
 1. **TabPFN learns what a person does to a room.** It sees thousands of labelled minutes and works out what a body looks like in the sensors: breath raising the CO₂, a hand on the light switch, warmth. Time of day is hidden from it, so it judges presence only from the physics.
