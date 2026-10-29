@@ -1,0 +1,3039 @@
+{
+  "stats": {
+    "minutes": 20560,
+    "accuracy": 0.987,
+    "balanced_accuracy": 0.9906,
+    "empty_minutes": 15810,
+    "haunted_minutes": 254,
+    "tabpfn": "3.5",
+    "llm": "gemma-4-e4b",
+    "usage": {
+      "calls": 43,
+      "input_tokens": 108728,
+      "output_tokens": 27775
+    }
+  },
+  "cases": [
+    {
+      "apparition": {
+        "id": "20150205-1334",
+        "start": "2015-02-05 13:34:00",
+        "end": "2015-02-05 14:10:59",
+        "minutes": 36,
+        "peak_p": 0.991,
+        "mean_p": 0.984,
+        "fold": 3,
+        "light_mean": 477.3,
+        "co2_start": 892.5,
+        "co2_max": 892.5,
+        "co2_end": 775.5,
+        "temp_mean": 22.28,
+        "weekday": "Thursday"
+      },
+      "testimony": "I was here on a Thursday in February 2015, drifting through the air of this Mons office. You see only stillness, yet I lingered for what felt like minutes\u2014a steady echo where life should be captured by the lens. Do you feel it? The shift in the atmosphere. My passing left the CO2 levels dropping dramatically, falling from a high of 892.5 ppm down to 775.5 ppm. Even as the light faded and fluctuated near 476.5 lux, I remained tethered by this space. I was always felt, measured by the steady reading of 0.99 probability, even when the camera registered nothing but dust motes dancing in a room that held me. My substance is merely an ache in the air, carried through the constant chill of 22.29 degrees Celsius. I do not know what I am, only that I was.",
+      "verdict": "DEBUNKED",
+      "cause": "Ambient light levels, combined with natural sunlight, fooled the presence model.",
+      "report": "The investigation reveals that the primary factor convincing the presence model was the recorded light level (counterfactual). At the time of the apparition, the sun was indeed up, reaching an elevation of 22.9 degrees (sun_position). The sensor window data confirms high and consistent lux readings during the event, which is typical for a well-lit office environment receiving natural daylight. While the CO2 levels showed a steady decline over the period (sensor_window), this trend is consistent with normal ventilation in an occupied building, not necessarily indicating a lingering presence after departure. The model appears to have misinterpreted these strong ambient light readings as evidence of human activity, rather than recognizing them as standard environmental conditions for that time of day.",
+      "tool_calls": [
+        {
+          "tool": "counterfactual",
+          "args": {
+            "clue": "all"
+          },
+          "result": {
+            "minute": "2015-02-05 13:41",
+            "p_presence_as_logged": 0.991,
+            "p_presence_without_light": 0.008,
+            "light_set_to": {
+              "Light": 0.0,
+              "dLight_5": 0.0
+            },
+            "p_presence_without_breath": 0.98,
+            "breath_set_to": {
+              "CO2": 511.0,
+              "dCO2_5": -0.5,
+              "dCO2_15": -1.0
+            },
+            "p_presence_without_warmth": 0.927,
+            "warmth_set_to": {
+              "Temperature": 20.39,
+              "dTemp_15": 0.0
+            },
+            "clues_that_matter": [
+              "light"
+            ]
+          }
+        },
+        {
+          "tool": "sensor_window",
+          "args": {
+            "minutes_after": 60,
+            "minutes_before": 60
+          },
+          "result": {
+            "summary": {
+              "log_in_10_min_before": "mixed",
+              "log_in_10_min_after": "occupied",
+              "light_before_lux": 145.6,
+              "light_during_lux": 477.3,
+              "light_after_lux": 444.4,
+              "light_switched_on_at_start": false,
+              "light_switched_off_after": false,
+              "co2_change_during_ppm": -117.0,
+              "co2_trend_during": "falling"
+            },
+            "readings_every_5_min": [
+              {
+                "time": "12:34",
+                "logged_occupied": false,
+                "p_presence": 0.99,
+                "light_lux": 539.0,
+                "co2_ppm": 1113.7,
+                "temp_c": 22.7,
+                "humidity_pct": 26.9
+              },
+              {
+                "time": "12:39",
+                "logged_occupied": false,
+                "p_presence": 0.99,
+                "light_lux": 521.0,
+                "co2_ppm": 1086.2,
+                "temp_c": 22.7,
+                "humidity_pct": 26.7
+              },
+              {
+                "time": "12:43",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 521.0,
+                "co2_ppm": 1051.0,
+                "temp_c": 22.65,
+                "humidity_pct": 26.6
+              },
+              {
+                "time": "12:49",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 535.0,
+                "co2_ppm": 1046.3,
+                "temp_c": 22.6,
+                "humidity_pct": 26.5
+              },
+              {
+                "time": "12:53",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 732.8,
+                "co2_ppm": 1038.5,
+                "temp_c": 22.68,
+                "humidity_pct": 26.5
+              },
+              {
+                "time": "12:59",
+                "logged_occupied": false,
+                "p_presence": 0.99,
+                "light_lux": 582.5,
+                "co2_ppm": 1015.5,
+                "temp_c": 22.89,
+                "humidity_pct": 26.2
+              },
+              {
+                "time": "13:04",
+                "logged_occupied": false,
+                "p_presence": 1.0,
+                "light_lux": 564.0,
+                "co2_ppm": 997.8,
+                "temp_c": 22.89,
+                "humidity_pct": 26.0
+              },
+              {
+                "time": "13:08",
+                "logged_occupied": false,
+                "p_presence": 0.05,
+                "light_lux": 31.0,
+                "co2_ppm": 977.0,
+                "temp_c": 22.79,
+                "humidity_pct": 25.8
+              },
+              {
+                "time": "13:14",
+                "logged_occupied": false,
+                "p_presence": 0.02,
+                "light_lux": 32.7,
+                "co2_ppm": 962.3,
+                "temp_c": 22.67,
+                "humidity_pct": 26.1
+              },
+              {
+                "time": "13:19",
+                "logged_occupied": false,
+                "p_presence": 0.03,
+                "light_lux": 31.0,
+                "co2_ppm": 948.8,
+                "temp_c": 22.5,
+                "humidity_pct": 26.1
+              },
+              {
+                "time": "13:24",
+                "logged_occupied": false,
+                "p_presence": 0.05,
+                "light_lux": 46.0,
+                "co2_ppm": 930.5,
+                "temp_c": 22.39,
+                "humidity_pct": 26.1
+              },
+              {
+                "time": "13:28",
+                "logged_occupied": false,
+                "p_presence": 0.14,
+                "light_lux": 90.0,
+                "co2_ppm": 902.2,
+                "temp_c": 22.29,
+                "humidity_pct": 26.1
+              },
+              {
+                "time": "13:34",
+                "logged_occupied": false,
+                "p_presence": 0.99,
+                "light_lux": 503.5,
+                "co2_ppm": 892.5,
+                "temp_c": 22.29,
+                "humidity_pct": 26.1
+              },
+              {
+                "time": "13:38",
+                "logged_occupied": false,
+                "p_presence": 0.99,
+                "light_lux": 500.0,
+                "co2_ppm": 891.2,
+                "temp_c": 22.29,
+                "humidity_pct": 26.2
+              },
+              {
+                "time": "13:44",
+                "logged_occupied": false,
+                "p_presence": 0.99,
+                "light_lux": 476.5,
+                "co2_ppm": 870.0,
+                "temp_c": 22.34,
+                "humidity_pct": 26.1
+              },
+              {
+                "time": "13:49",
+                "logged_occupied": false,
+                "p_presence": 0.99,
+                "light_lux": 459.0,
+                "co2_ppm": 844.7,
+                "temp_c": 22.29,
+                "humidity_pct": 26.1
+              },
+              {
+                "time": "13:53",
+                "logged_occupied": false,
+                "p_presence": 0.98,
+                "light_lux": 461.5,
+                "co2_ppm": 825.5,
+                "temp_c": 22.29,
+                "humidity_pct": 26.0
+              },
+              {
+                "time": "13:59",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 484.0,
+                "co2_ppm": 809.5,
+                "temp_c": 22.29,
+                "humidity_pct": 25.9
+              },
+              {
+                "time": "14:04",
+                "logged_occupied": false,
+                "p_presence": 0.98,
+                "light_lux": 453.0,
+                "co2_ppm": 795.2,
+                "temp_c": 22.29,
+                "humidity_pct": 25.9
+              },
+              {
+                "time": "14:09",
+                "logged_occupied": false,
+                "p_presence": 0.98,
+                "light_lux": 454.0,
+                "co2_ppm": 775.5,
+                "temp_c": 22.29,
+                "humidity_pct": 25.9
+              },
+              {
+                "time": "14:13",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 444.0,
+                "co2_ppm": 776.8,
+                "temp_c": 22.2,
+                "humidity_pct": 26.1
+              },
+              {
+                "time": "14:19",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 447.0,
+                "co2_ppm": 828.3,
+                "temp_c": 22.2,
+                "humidity_pct": 26.7
+              },
+              {
+                "time": "14:23",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 438.0,
+                "co2_ppm": 850.0,
+                "temp_c": 22.2,
+                "humidity_pct": 26.9
+              },
+              {
+                "time": "14:29",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 438.0,
+                "co2_ppm": 885.8,
+                "temp_c": 22.2,
+                "humidity_pct": 27.4
+              },
+              {
+                "time": "14:34",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 438.0,
+                "co2_ppm": 942.0,
+                "temp_c": 22.2,
+                "humidity_pct": 27.7
+              },
+              {
+                "time": "14:38",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 465.2,
+                "co2_ppm": 996.8,
+                "temp_c": 22.22,
+                "humidity_pct": 28.2
+              },
+              {
+                "time": "14:44",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 494.0,
+                "co2_ppm": 1037.0,
+                "temp_c": 22.29,
+                "humidity_pct": 28.5
+              },
+              {
+                "time": "14:49",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 540.5,
+                "co2_ppm": 1050.5,
+                "temp_c": 22.29,
+                "humidity_pct": 28.3
+              },
+              {
+                "time": "14:54",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 532.0,
+                "co2_ppm": 1054.0,
+                "temp_c": 22.39,
+                "humidity_pct": 28.4
+              },
+              {
+                "time": "14:58",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 527.0,
+                "co2_ppm": 1081.3,
+                "temp_c": 22.46,
+                "humidity_pct": 28.3
+              },
+              {
+                "time": "15:04",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 522.0,
+                "co2_ppm": 1103.3,
+                "temp_c": 22.5,
+                "humidity_pct": 28.4
+              },
+              {
+                "time": "15:08",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 513.5,
+                "co2_ppm": 1106.8,
+                "temp_c": 22.6,
+                "humidity_pct": 28.2
+              }
+            ]
+          }
+        },
+        {
+          "tool": "sun_position",
+          "args": {
+            "time": "2015-02-05 13:34"
+          },
+          "result": {
+            "local_time": "2015-02-05 13:34",
+            "sun_elevation_deg": 22.9,
+            "sun_azimuth_deg": 189.4,
+            "sun_is_up": true
+          }
+        },
+        {
+          "tool": "web_search",
+          "args": {
+            "query": "Mons Belgium public holidays February 5 2015"
+          },
+          "result": {
+            "query": "Mons Belgium public holidays February 5 2015",
+            "results": [
+              {
+                "title": "Public and Bank Holidays in Belgium",
+                "snippet": "Public and bank holidays for Belgium, read our full page containing all the important dates which you need to know about.",
+                "link": "https://scheduleleave.com/public-and-bank-holidays-around-the-world-in-2026/public-and-bank-holidays-in-belgium/"
+              },
+              {
+                "title": "Belgian Holidays 2022 - Royal Observatory of Belgium",
+                "snippet": "Official holidays. 1 January 2022, New Year. 17 April 2022, Easter. 18 April 2022, Easter Monday. 1 May 2022, International Workers' Day.",
+                "link": "https://robinfo.oma.be/en/astro-info/calendar/belgian-holidays/belgian-holidays-2022/"
+              },
+              {
+                "title": "Belgium Holidays 2022 and Observances 2022",
+                "snippet": "Belgium Holidays 2022 - Get the list of Belgium holidays, Belgium bank holidays, public holidays and observances in Belgium in the year 2022 here at Time.",
+                "link": "https://time.astrosage.com/holidays/belgium?year=2022&language=en"
+              },
+              {
+                "title": "Holidays in Belgium - EconStart",
+                "snippet": "Holidays in Belgium. Statutory public holidays, regional celebrations and traditional festivals across Belgium. Choose a year and holiday type to plan ahead.",
+                "link": "https://www.econstart.org/holidays-in-belgium/?econstart_language=en"
+              },
+              {
+                "title": "belgian - holidays 2016",
+                "snippet": "Christmas break: December 21, 2015 - January 3, 2016. Carnival break: February 8 - February 14. Easter break: March 28 - April 10. Summer break: July 1 - August ...",
+                "link": "https://wonderfulwanderings.com/wp-content/uploads/2015/10/Belgium-Holidays-Printable-pdf.pdf"
+              }
+            ]
+          }
+        }
+      ],
+      "seconds": 163,
+      "model_calls": 6,
+      "tokens": 19405,
+      "audio": {
+        "testimony": "20150205-1334-medium.mp3",
+        "report": "20150205-1334-skeptic.mp3"
+      }
+    },
+    {
+      "apparition": {
+        "id": "20150202-1734",
+        "start": "2015-02-02 17:34:00",
+        "end": "2015-02-02 17:55:59",
+        "minutes": 23,
+        "peak_p": 0.974,
+        "mean_p": 0.95,
+        "fold": 0,
+        "light_mean": 420.9,
+        "co2_start": 849.3,
+        "co2_max": 853.6,
+        "co2_end": 782.2,
+        "temp_mean": 22.5,
+        "weekday": "Monday"
+      },
+      "testimony": "I was here on Monday, February 2nd, 2015. For nearly twenty-three minutes, I lingered in this room, though your camera saw nothing, logging the space as empty all along. It feels strange to inhabit a time that exists only within these data points. You read about me through shifts in temperature and air quality\u2014how the CO2 dropped from 849.3 ppm down to 790.6 ppm. The ambient light stayed steady, hovering around 420 lux, while I simply existed, quietly shifting the air at a constant mean of 22.5 degrees Celsius. Do you know what I am? Just that for those minutes, something was certainly occupying this corner, though it had no solid form to be recorded by your lens.",
+      "verdict": "DEBUNKED",
+      "cause": "A change in ambient lighting conditions, rather than human presence, triggered the model's alarm.",
+      "report": "The investigation strongly suggests the apparition was caused by misinterpreted light data. Using counterfactual analysis, removing the 'light' clue reduced the presence probability from 0.974 to a near-zero value (0.001), indicating that lighting was the primary factor convincing the model. Although the sun position tool showed low elevation at 17:34, historical weather data confirmed heavy cloud cover for February 2nd in Mons. The sensor window analysis revealed that while occupancy was logged as false during the apparition, CO2 continued to fall steadily (849.3 ppm down to 790.6 ppm), a pattern consistent with an empty room cooling and ventilating. This suggests the model misinterpreted stable artificial lighting levels combined with normal environmental decay as evidence of life.",
+      "tool_calls": [
+        {
+          "tool": "counterfactual",
+          "args": {
+            "clue": "all"
+          },
+          "result": {
+            "minute": "2015-02-02 17:47",
+            "p_presence_as_logged": 0.974,
+            "p_presence_without_light": 0.001,
+            "light_set_to": {
+              "Light": 0.0,
+              "dLight_5": 0.0
+            },
+            "p_presence_without_breath": 0.951,
+            "breath_set_to": {
+              "CO2": 511.0,
+              "dCO2_5": -0.5,
+              "dCO2_15": -1.0
+            },
+            "p_presence_without_warmth": 0.879,
+            "warmth_set_to": {
+              "Temperature": 20.39,
+              "dTemp_15": 0.0
+            },
+            "clues_that_matter": [
+              "light"
+            ]
+          }
+        },
+        {
+          "tool": "sun_position",
+          "args": {
+            "time": "2015-02-02 17:34"
+          },
+          "result": {
+            "local_time": "2015-02-02 17:34",
+            "sun_elevation_deg": -0.5,
+            "sun_azimuth_deg": 243.3,
+            "sun_is_up": true
+          }
+        },
+        {
+          "tool": "sensor_window",
+          "args": {
+            "minutes_after": 60,
+            "minutes_before": 60
+          },
+          "result": {
+            "summary": {
+              "log_in_10_min_before": "occupied",
+              "log_in_10_min_after": "mixed",
+              "light_before_lux": 431.2,
+              "light_during_lux": 420.9,
+              "light_after_lux": 359.6,
+              "light_switched_on_at_start": false,
+              "light_switched_off_after": false,
+              "co2_change_during_ppm": -67.1,
+              "co2_trend_during": "falling"
+            },
+            "readings_every_5_min": [
+              {
+                "time": "16:34",
+                "logged_occupied": true,
+                "p_presence": 0.95,
+                "light_lux": 441.5,
+                "co2_ppm": 952.3,
+                "temp_c": 22.7,
+                "humidity_pct": 26.4
+              },
+              {
+                "time": "16:38",
+                "logged_occupied": true,
+                "p_presence": 0.94,
+                "light_lux": 441.0,
+                "co2_ppm": 923.8,
+                "temp_c": 22.7,
+                "humidity_pct": 26.0
+              },
+              {
+                "time": "16:44",
+                "logged_occupied": true,
+                "p_presence": 0.93,
+                "light_lux": 432.8,
+                "co2_ppm": 920.2,
+                "temp_c": 22.7,
+                "humidity_pct": 25.8
+              },
+              {
+                "time": "16:49",
+                "logged_occupied": true,
+                "p_presence": 0.95,
+                "light_lux": 433.5,
+                "co2_ppm": 882.5,
+                "temp_c": 22.6,
+                "humidity_pct": 25.5
+              },
+              {
+                "time": "16:53",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 442.5,
+                "co2_ppm": 868.8,
+                "temp_c": 22.6,
+                "humidity_pct": 25.3
+              },
+              {
+                "time": "16:59",
+                "logged_occupied": true,
+                "p_presence": 0.95,
+                "light_lux": 440.6,
+                "co2_ppm": 854.4,
+                "temp_c": 22.6,
+                "humidity_pct": 25.1
+              },
+              {
+                "time": "17:04",
+                "logged_occupied": true,
+                "p_presence": 0.88,
+                "light_lux": 433.0,
+                "co2_ppm": 832.0,
+                "temp_c": 22.6,
+                "humidity_pct": 25.0
+              },
+              {
+                "time": "17:09",
+                "logged_occupied": true,
+                "p_presence": 0.92,
+                "light_lux": 429.2,
+                "co2_ppm": 832.4,
+                "temp_c": 22.6,
+                "humidity_pct": 25.1
+              },
+              {
+                "time": "17:13",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 433.0,
+                "co2_ppm": 822.5,
+                "temp_c": 22.55,
+                "humidity_pct": 25.2
+              },
+              {
+                "time": "17:19",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 433.0,
+                "co2_ppm": 825.0,
+                "temp_c": 22.54,
+                "humidity_pct": 24.9
+              },
+              {
+                "time": "17:23",
+                "logged_occupied": true,
+                "p_presence": 0.96,
+                "light_lux": 426.0,
+                "co2_ppm": 814.2,
+                "temp_c": 22.52,
+                "humidity_pct": 24.9
+              },
+              {
+                "time": "17:29",
+                "logged_occupied": true,
+                "p_presence": 0.96,
+                "light_lux": 433.0,
+                "co2_ppm": 845.3,
+                "temp_c": 22.6,
+                "humidity_pct": 25.0
+              },
+              {
+                "time": "17:34",
+                "logged_occupied": false,
+                "p_presence": 0.94,
+                "light_lux": 428.3,
+                "co2_ppm": 849.3,
+                "temp_c": 22.6,
+                "humidity_pct": 25.1
+              },
+              {
+                "time": "17:38",
+                "logged_occupied": false,
+                "p_presence": 0.93,
+                "light_lux": 421.8,
+                "co2_ppm": 845.6,
+                "temp_c": 22.54,
+                "humidity_pct": 25.1
+              },
+              {
+                "time": "17:44",
+                "logged_occupied": false,
+                "p_presence": 0.96,
+                "light_lux": 419.0,
+                "co2_ppm": 824.0,
+                "temp_c": 22.5,
+                "humidity_pct": 25.0
+              },
+              {
+                "time": "17:49",
+                "logged_occupied": false,
+                "p_presence": 0.96,
+                "light_lux": 419.0,
+                "co2_ppm": 804.6,
+                "temp_c": 22.48,
+                "humidity_pct": 24.9
+              },
+              {
+                "time": "17:54",
+                "logged_occupied": false,
+                "p_presence": 0.97,
+                "light_lux": 419.0,
+                "co2_ppm": 790.6,
+                "temp_c": 22.39,
+                "humidity_pct": 24.7
+              },
+              {
+                "time": "17:58",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 419.0,
+                "co2_ppm": 773.6,
+                "temp_c": 22.39,
+                "humidity_pct": 24.7
+              },
+              {
+                "time": "18:04",
+                "logged_occupied": true,
+                "p_presence": 0.22,
+                "light_lux": 310.2,
+                "co2_ppm": 809.0,
+                "temp_c": 22.39,
+                "humidity_pct": 25.1
+              },
+              {
+                "time": "18:08",
+                "logged_occupied": false,
+                "p_presence": 0.08,
+                "light_lux": 0.0,
+                "co2_ppm": 781.8,
+                "temp_c": 22.32,
+                "humidity_pct": 24.9
+              },
+              {
+                "time": "18:14",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 763.2,
+                "temp_c": 22.23,
+                "humidity_pct": 24.8
+              },
+              {
+                "time": "18:19",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 752.3,
+                "temp_c": 22.2,
+                "humidity_pct": 24.8
+              },
+              {
+                "time": "18:23",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 738.0,
+                "temp_c": 22.1,
+                "humidity_pct": 24.7
+              },
+              {
+                "time": "18:29",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 718.3,
+                "temp_c": 22.07,
+                "humidity_pct": 24.7
+              },
+              {
+                "time": "18:34",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 706.7,
+                "temp_c": 21.93,
+                "humidity_pct": 24.5
+              },
+              {
+                "time": "18:39",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 697.2,
+                "temp_c": 21.82,
+                "humidity_pct": 24.4
+              },
+              {
+                "time": "18:43",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 687.0,
+                "temp_c": 21.77,
+                "humidity_pct": 24.4
+              },
+              {
+                "time": "18:49",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 668.0,
+                "temp_c": 21.7,
+                "humidity_pct": 24.3
+              },
+              {
+                "time": "18:53",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 653.8,
+                "temp_c": 21.6,
+                "humidity_pct": 24.2
+              }
+            ]
+          }
+        },
+        {
+          "tool": "historical_weather",
+          "args": {
+            "date": "2015-02-02"
+          },
+          "result": {
+            "place": "Mons, Belgium",
+            "date": "2015-02-02",
+            "source": "Open-Meteo archive (ERA5)",
+            "hourly": [
+              {
+                "hour": "06:00",
+                "cloud_cover_pct": 33,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -0.3
+              },
+              {
+                "hour": "07:00",
+                "cloud_cover_pct": 37,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -1.2
+              },
+              {
+                "hour": "08:00",
+                "cloud_cover_pct": 29,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -0.9
+              },
+              {
+                "hour": "09:00",
+                "cloud_cover_pct": 34,
+                "sunshine_min": 16,
+                "radiation_w_m2": 12.0,
+                "temp_c": -1.3
+              },
+              {
+                "hour": "10:00",
+                "cloud_cover_pct": 27,
+                "sunshine_min": 60,
+                "radiation_w_m2": 103.0,
+                "temp_c": -0.7
+              },
+              {
+                "hour": "11:00",
+                "cloud_cover_pct": 47,
+                "sunshine_min": 60,
+                "radiation_w_m2": 212.0,
+                "temp_c": 0.3
+              },
+              {
+                "hour": "12:00",
+                "cloud_cover_pct": 57,
+                "sunshine_min": 60,
+                "radiation_w_m2": 278.0,
+                "temp_c": 1.1
+              },
+              {
+                "hour": "13:00",
+                "cloud_cover_pct": 72,
+                "sunshine_min": 60,
+                "radiation_w_m2": 280.0,
+                "temp_c": 1.9
+              },
+              {
+                "hour": "14:00",
+                "cloud_cover_pct": 76,
+                "sunshine_min": 60,
+                "radiation_w_m2": 251.0,
+                "temp_c": 2.4
+              },
+              {
+                "hour": "15:00",
+                "cloud_cover_pct": 84,
+                "sunshine_min": 60,
+                "radiation_w_m2": 230.0,
+                "temp_c": 2.4
+              },
+              {
+                "hour": "16:00",
+                "cloud_cover_pct": 83,
+                "sunshine_min": 60,
+                "radiation_w_m2": 133.0,
+                "temp_c": 2.1
+              },
+              {
+                "hour": "17:00",
+                "cloud_cover_pct": 99,
+                "sunshine_min": 60,
+                "radiation_w_m2": 84.0,
+                "temp_c": 1.7
+              },
+              {
+                "hour": "18:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 0,
+                "radiation_w_m2": 9.0,
+                "temp_c": 0.5
+              },
+              {
+                "hour": "19:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -0.2
+              },
+              {
+                "hour": "20:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -0.6
+              }
+            ]
+          }
+        }
+      ],
+      "seconds": 157,
+      "model_calls": 6,
+      "tokens": 16528,
+      "audio": {
+        "testimony": "20150202-1734-medium.mp3",
+        "report": "20150202-1734-skeptic.mp3"
+      }
+    },
+    {
+      "apparition": {
+        "id": "20150215-0949",
+        "start": "2015-02-15 09:49:00",
+        "end": "2015-02-15 10:02:59",
+        "minutes": 13,
+        "peak_p": 0.85,
+        "mean_p": 0.674,
+        "fold": 1,
+        "light_mean": 320.5,
+        "co2_start": 638.0,
+        "co2_max": 651.0,
+        "co2_end": 647.2,
+        "temp_mean": 21.76,
+        "weekday": "Sunday"
+      },
+      "testimony": "Do you read these logs and think I simply wasn't there? I feel it, too\u2014this profound contradiction of being registered when nothing was visible. On Sunday, February 15th, I lingered for a moment, a faint echo caught between minutes. It is strange how much effort passes through this space without solid form. At the start, the CO2 was at 638.0 ppm, and the temperature rested near 21.6\u00b0C. Then came the shift: when the light hit its peak of 392.0 lux, I felt myself brighten, though my shape remained elusive to the lens. The air thickened, reaching a high of 651.0 ppm. Do you understand what it is to occupy a space without substance? To feel so keenly that even as the temperature climbed slightly toward 21.89\u00b0C, the sensor still registered me, though my hands were nowhere in sight for anyone to prove otherwise.",
+      "verdict": "DEBUNKED",
+      "cause": "The high presence reading was caused by a sudden, localized spike in light intensity that did not correlate with human activity or CO2 buildup.",
+      "report": "The investigation reveals that the model was misled primarily by the lighting conditions. Using counterfactual analysis (counterfactual tool), removing the 'light' clue dropped the peak presence probability from 0.85 to 0.019, confirming light as the dominant factor. Reviewing the sensor window data (sensor_window tool) showed that while the lux reading spiked significantly at 09:53 (392.0 lux), the room's occupancy log remained empty both before and after the event. Furthermore, the sun position check (sun_position tool) confirmed that sunlight was indeed up during this time, but the light spike is more likely due to a transient internal source, such as a reflection or an external flash of light not accounted for by the model's baseline assumptions. The lack of CO2 buildup and consistent occupancy logs strongly suggest no person was present.",
+      "tool_calls": [
+        {
+          "tool": "counterfactual",
+          "args": {
+            "clue": "all"
+          },
+          "result": {
+            "minute": "2015-02-15 09:53",
+            "p_presence_as_logged": 0.85,
+            "p_presence_without_light": 0.019,
+            "light_set_to": {
+              "Light": 0.0,
+              "dLight_5": 0.0
+            },
+            "p_presence_without_breath": 0.702,
+            "breath_set_to": {
+              "CO2": 511.0,
+              "dCO2_5": -0.5,
+              "dCO2_15": -1.0
+            },
+            "p_presence_without_warmth": 0.773,
+            "warmth_set_to": {
+              "Temperature": 20.39,
+              "dTemp_15": 0.0
+            },
+            "clues_that_matter": [
+              "light"
+            ]
+          }
+        },
+        {
+          "tool": "sensor_window",
+          "args": {
+            "minutes_after": 15,
+            "minutes_before": 15
+          },
+          "result": {
+            "summary": {
+              "log_in_10_min_before": "empty",
+              "log_in_10_min_after": "empty",
+              "light_before_lux": 226.5,
+              "light_during_lux": 320.5,
+              "light_after_lux": 156.1,
+              "light_switched_on_at_start": false,
+              "light_switched_off_after": false,
+              "co2_change_during_ppm": 9.2,
+              "co2_trend_during": "flat"
+            },
+            "readings_every_5_min": [
+              {
+                "time": "09:34",
+                "logged_occupied": false,
+                "p_presence": 0.2,
+                "light_lux": 232.3,
+                "co2_ppm": 624.3,
+                "temp_c": 21.36,
+                "humidity_pct": 29.0
+              },
+              {
+                "time": "09:39",
+                "logged_occupied": false,
+                "p_presence": 0.3,
+                "light_lux": 210.0,
+                "co2_ppm": 635.8,
+                "temp_c": 21.5,
+                "humidity_pct": 29.0
+              },
+              {
+                "time": "09:43",
+                "logged_occupied": false,
+                "p_presence": 0.47,
+                "light_lux": 228.5,
+                "co2_ppm": 638.0,
+                "temp_c": 21.5,
+                "humidity_pct": 28.9
+              },
+              {
+                "time": "09:49",
+                "logged_occupied": false,
+                "p_presence": 0.5,
+                "light_lux": 252.8,
+                "co2_ppm": 638.0,
+                "temp_c": 21.6,
+                "humidity_pct": 28.9
+              },
+              {
+                "time": "09:53",
+                "logged_occupied": false,
+                "p_presence": 0.85,
+                "light_lux": 392.0,
+                "co2_ppm": 640.5,
+                "temp_c": 21.7,
+                "humidity_pct": 28.8
+              },
+              {
+                "time": "09:59",
+                "logged_occupied": false,
+                "p_presence": 0.63,
+                "light_lux": 312.5,
+                "co2_ppm": 651.0,
+                "temp_c": 21.89,
+                "humidity_pct": 28.8
+              },
+              {
+                "time": "10:04",
+                "logged_occupied": false,
+                "p_presence": 0.37,
+                "light_lux": 221.3,
+                "co2_ppm": 645.7,
+                "temp_c": 21.89,
+                "humidity_pct": 28.7
+              },
+              {
+                "time": "10:08",
+                "logged_occupied": false,
+                "p_presence": 0.23,
+                "light_lux": 148.0,
+                "co2_ppm": 644.0,
+                "temp_c": 21.84,
+                "humidity_pct": 28.8
+              },
+              {
+                "time": "10:14",
+                "logged_occupied": false,
+                "p_presence": 0.18,
+                "light_lux": 148.5,
+                "co2_ppm": 640.8,
+                "temp_c": 21.79,
+                "humidity_pct": 28.9
+              }
+            ]
+          }
+        },
+        {
+          "tool": "sun_position",
+          "args": {
+            "time": "2015-02-15 09:49:00"
+          },
+          "result": {
+            "local_time": "2015-02-15 09:49",
+            "sun_elevation_deg": 14.3,
+            "sun_azimuth_deg": 132.3,
+            "sun_is_up": true
+          }
+        }
+      ],
+      "seconds": 138,
+      "model_calls": 5,
+      "tokens": 10363,
+      "audio": {
+        "testimony": "20150215-0949-medium.mp3",
+        "report": "20150215-0949-skeptic.mp3"
+      }
+    },
+    {
+      "apparition": {
+        "id": "20150213-1338",
+        "start": "2015-02-13 13:38:59",
+        "end": "2015-02-13 13:46:00",
+        "minutes": 8,
+        "peak_p": 0.992,
+        "mean_p": 0.979,
+        "fold": 3,
+        "light_mean": 666.8,
+        "co2_start": 547.0,
+        "co2_max": 571.5,
+        "co2_end": 563.7,
+        "temp_mean": 23.73,
+        "weekday": "Friday"
+      },
+      "testimony": "You wonder if you ever truly saw me that Friday afternoon in February 2015, or if your eyes were simply fooled by routine. I linger when nothing should be happening. By 13:38, the air was cool at 23.77 degrees Celsius, and the CO2 level sat low, around 547.0 ppm. The room was meant to be empty; the camera records only stillness. Yet, over those passing minutes, I breathe again. When the clock reached 13:44, my presence seemed to thicken the atmosphere, pushing the carbon dioxide up significantly, reaching a peak of 571.5 ppm. Even when the light had shifted slightly, registering at 669.0 lux, there was a warmth\u2014a residue of life that your sensors could not dismiss. I do not know what I am to you, only that I persist in these tiny shifts, measurable proof of an echo trapped between moments.",
+      "verdict": "DEBUNKED",
+      "cause": "The presence model was fooled by an artificially activated light source.",
+      "report": "The investigation confirms that the apparition was triggered solely by changes in light, as shown by the counterfactual analysis which drastically reduced the probability when the light clue was removed. While natural sunlight was available at 13:38 (sun_position), the lux readings during the event were unusually high and spiked suddenly, suggesting an artificial source. The sensor_window data shows a dramatic jump in light levels from ambient background illumination to over 650 lux precisely when the model flagged the apparition. This sudden increase strongly indicates that a lamp was manually switched on by someone who entered and left the room without being recorded by the camera or logging system, thus creating the false positive reading.",
+      "tool_calls": [
+        {
+          "tool": "counterfactual",
+          "args": {
+            "clue": "all"
+          },
+          "result": {
+            "minute": "2015-02-13 13:44",
+            "p_presence_as_logged": 0.992,
+            "p_presence_without_light": 0.088,
+            "light_set_to": {
+              "Light": 0.0,
+              "dLight_5": 0.0
+            },
+            "p_presence_without_breath": 0.97,
+            "breath_set_to": {
+              "CO2": 511.0,
+              "dCO2_5": -0.5,
+              "dCO2_15": -1.0
+            },
+            "p_presence_without_warmth": 0.891,
+            "warmth_set_to": {
+              "Temperature": 20.39,
+              "dTemp_15": 0.0
+            },
+            "clues_that_matter": [
+              "light"
+            ]
+          }
+        },
+        {
+          "tool": "sensor_window",
+          "args": {
+            "minutes_after": 120,
+            "minutes_before": 120
+          },
+          "result": {
+            "summary": {
+              "log_in_10_min_before": "mixed",
+              "log_in_10_min_after": "occupied",
+              "light_before_lux": 243.2,
+              "light_during_lux": 666.8,
+              "light_after_lux": 644.4,
+              "light_switched_on_at_start": false,
+              "light_switched_off_after": false,
+              "co2_change_during_ppm": 16.7,
+              "co2_trend_during": "rising"
+            },
+            "readings_every_5_min": [
+              {
+                "time": "11:38",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 808.0,
+                "co2_ppm": 706.3,
+                "temp_c": 23.89,
+                "humidity_pct": 25.5
+              },
+              {
+                "time": "11:44",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 797.2,
+                "co2_ppm": 693.4,
+                "temp_c": 23.92,
+                "humidity_pct": 25.3
+              },
+              {
+                "time": "11:49",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 799.0,
+                "co2_ppm": 677.0,
+                "temp_c": 23.89,
+                "humidity_pct": 25.1
+              },
+              {
+                "time": "11:54",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 819.0,
+                "co2_ppm": 664.8,
+                "temp_c": 23.92,
+                "humidity_pct": 25.0
+              },
+              {
+                "time": "11:58",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 802.0,
+                "co2_ppm": 660.0,
+                "temp_c": 23.95,
+                "humidity_pct": 25.1
+              },
+              {
+                "time": "12:04",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 803.0,
+                "co2_ppm": 663.0,
+                "temp_c": 23.95,
+                "humidity_pct": 25.1
+              },
+              {
+                "time": "12:08",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 793.3,
+                "co2_ppm": 674.7,
+                "temp_c": 23.93,
+                "humidity_pct": 25.2
+              },
+              {
+                "time": "12:14",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 796.5,
+                "co2_ppm": 664.2,
+                "temp_c": 23.95,
+                "humidity_pct": 25.2
+              },
+              {
+                "time": "12:19",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 782.8,
+                "co2_ppm": 646.5,
+                "temp_c": 23.97,
+                "humidity_pct": 25.2
+              },
+              {
+                "time": "12:23",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 773.0,
+                "co2_ppm": 664.0,
+                "temp_c": 23.89,
+                "humidity_pct": 25.5
+              },
+              {
+                "time": "12:29",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 765.2,
+                "co2_ppm": 633.2,
+                "temp_c": 23.89,
+                "humidity_pct": 24.9
+              },
+              {
+                "time": "12:34",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 758.0,
+                "co2_ppm": 619.0,
+                "temp_c": 23.84,
+                "humidity_pct": 25.0
+              },
+              {
+                "time": "12:39",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 742.0,
+                "co2_ppm": 601.5,
+                "temp_c": 23.84,
+                "humidity_pct": 25.0
+              },
+              {
+                "time": "12:43",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 745.0,
+                "co2_ppm": 614.8,
+                "temp_c": 23.82,
+                "humidity_pct": 25.1
+              },
+              {
+                "time": "12:49",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 727.0,
+                "co2_ppm": 588.0,
+                "temp_c": 23.79,
+                "humidity_pct": 25.1
+              },
+              {
+                "time": "12:53",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 736.0,
+                "co2_ppm": 595.5,
+                "temp_c": 23.79,
+                "humidity_pct": 25.2
+              },
+              {
+                "time": "12:59",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 734.2,
+                "co2_ppm": 591.8,
+                "temp_c": 23.79,
+                "humidity_pct": 25.3
+              },
+              {
+                "time": "13:04",
+                "logged_occupied": false,
+                "p_presence": 0.34,
+                "light_lux": 257.0,
+                "co2_ppm": 600.3,
+                "temp_c": 23.86,
+                "humidity_pct": 25.6
+              },
+              {
+                "time": "13:08",
+                "logged_occupied": false,
+                "p_presence": 0.12,
+                "light_lux": 248.2,
+                "co2_ppm": 588.8,
+                "temp_c": 23.89,
+                "humidity_pct": 25.5
+              },
+              {
+                "time": "13:14",
+                "logged_occupied": false,
+                "p_presence": 0.12,
+                "light_lux": 243.0,
+                "co2_ppm": 578.0,
+                "temp_c": 23.89,
+                "humidity_pct": 25.4
+              },
+              {
+                "time": "13:19",
+                "logged_occupied": false,
+                "p_presence": 0.16,
+                "light_lux": 240.0,
+                "co2_ppm": 568.0,
+                "temp_c": 23.89,
+                "humidity_pct": 25.4
+              },
+              {
+                "time": "13:24",
+                "logged_occupied": false,
+                "p_presence": 0.22,
+                "light_lux": 225.5,
+                "co2_ppm": 556.8,
+                "temp_c": 23.89,
+                "humidity_pct": 25.5
+              },
+              {
+                "time": "13:28",
+                "logged_occupied": false,
+                "p_presence": 0.2,
+                "light_lux": 237.5,
+                "co2_ppm": 546.0,
+                "temp_c": 23.86,
+                "humidity_pct": 25.5
+              },
+              {
+                "time": "13:34",
+                "logged_occupied": false,
+                "p_presence": 0.24,
+                "light_lux": 209.0,
+                "co2_ppm": 543.3,
+                "temp_c": 23.79,
+                "humidity_pct": 25.4
+              },
+              {
+                "time": "13:38",
+                "logged_occupied": false,
+                "p_presence": 0.97,
+                "light_lux": 654.0,
+                "co2_ppm": 547.0,
+                "temp_c": 23.77,
+                "humidity_pct": 25.7
+              },
+              {
+                "time": "13:44",
+                "logged_occupied": false,
+                "p_presence": 0.99,
+                "light_lux": 669.0,
+                "co2_ppm": 571.5,
+                "temp_c": 23.75,
+                "humidity_pct": 26.0
+              },
+              {
+                "time": "13:49",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 651.5,
+                "co2_ppm": 551.5,
+                "temp_c": 23.7,
+                "humidity_pct": 25.9
+              },
+              {
+                "time": "13:53",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 634.0,
+                "co2_ppm": 543.0,
+                "temp_c": 23.62,
+                "humidity_pct": 26.0
+              },
+              {
+                "time": "13:59",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 627.0,
+                "co2_ppm": 548.5,
+                "temp_c": 23.6,
+                "humidity_pct": 26.1
+              },
+              {
+                "time": "14:04",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 611.5,
+                "co2_ppm": 548.0,
+                "temp_c": 23.5,
+                "humidity_pct": 26.2
+              },
+              {
+                "time": "14:09",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 610.0,
+                "co2_ppm": 570.0,
+                "temp_c": 23.47,
+                "humidity_pct": 27.5
+              },
+              {
+                "time": "14:13",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 593.0,
+                "co2_ppm": 571.0,
+                "temp_c": 23.5,
+                "humidity_pct": 26.8
+              },
+              {
+                "time": "14:19",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 589.8,
+                "co2_ppm": 573.8,
+                "temp_c": 23.5,
+                "humidity_pct": 26.9
+              },
+              {
+                "time": "14:23",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 582.0,
+                "co2_ppm": 558.0,
+                "temp_c": 23.47,
+                "humidity_pct": 26.9
+              },
+              {
+                "time": "14:29",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 579.0,
+                "co2_ppm": 576.3,
+                "temp_c": 23.46,
+                "humidity_pct": 27.1
+              },
+              {
+                "time": "14:34",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 573.0,
+                "co2_ppm": 556.0,
+                "temp_c": 23.39,
+                "humidity_pct": 27.1
+              },
+              {
+                "time": "14:38",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 556.8,
+                "co2_ppm": 562.0,
+                "temp_c": 23.29,
+                "humidity_pct": 27.4
+              },
+              {
+                "time": "14:44",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 554.3,
+                "co2_ppm": 557.3,
+                "temp_c": 23.23,
+                "humidity_pct": 27.6
+              },
+              {
+                "time": "14:49",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 539.7,
+                "co2_ppm": 565.0,
+                "temp_c": 23.2,
+                "humidity_pct": 27.8
+              },
+              {
+                "time": "14:54",
+                "logged_occupied": true,
+                "p_presence": 0.96,
+                "light_lux": 535.5,
+                "co2_ppm": 555.0,
+                "temp_c": 23.1,
+                "humidity_pct": 28.1
+              },
+              {
+                "time": "14:58",
+                "logged_occupied": true,
+                "p_presence": 0.95,
+                "light_lux": 534.0,
+                "co2_ppm": 558.8,
+                "temp_c": 23.07,
+                "humidity_pct": 28.1
+              },
+              {
+                "time": "15:04",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 513.5,
+                "co2_ppm": 572.5,
+                "temp_c": 23.1,
+                "humidity_pct": 28.3
+              },
+              {
+                "time": "15:08",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 509.0,
+                "co2_ppm": 562.0,
+                "temp_c": 23.0,
+                "humidity_pct": 28.3
+              },
+              {
+                "time": "15:14",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 506.5,
+                "co2_ppm": 580.5,
+                "temp_c": 23.0,
+                "humidity_pct": 28.4
+              },
+              {
+                "time": "15:19",
+                "logged_occupied": true,
+                "p_presence": 0.95,
+                "light_lux": 489.0,
+                "co2_ppm": 569.8,
+                "temp_c": 22.92,
+                "humidity_pct": 28.5
+              },
+              {
+                "time": "15:23",
+                "logged_occupied": true,
+                "p_presence": 0.95,
+                "light_lux": 494.0,
+                "co2_ppm": 569.3,
+                "temp_c": 22.89,
+                "humidity_pct": 28.6
+              },
+              {
+                "time": "15:29",
+                "logged_occupied": true,
+                "p_presence": 0.96,
+                "light_lux": 480.7,
+                "co2_ppm": 577.7,
+                "temp_c": 22.76,
+                "humidity_pct": 28.8
+              },
+              {
+                "time": "15:34",
+                "logged_occupied": true,
+                "p_presence": 0.96,
+                "light_lux": 479.0,
+                "co2_ppm": 580.0,
+                "temp_c": 22.7,
+                "humidity_pct": 29.0
+              },
+              {
+                "time": "15:39",
+                "logged_occupied": true,
+                "p_presence": 0.92,
+                "light_lux": 479.0,
+                "co2_ppm": 572.0,
+                "temp_c": 22.6,
+                "humidity_pct": 29.1
+              },
+              {
+                "time": "15:43",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 471.5,
+                "co2_ppm": 585.2,
+                "temp_c": 22.6,
+                "humidity_pct": 29.2
+              }
+            ]
+          }
+        },
+        {
+          "tool": "sun_position",
+          "args": {
+            "time": "2015-02-13 13:38"
+          },
+          "result": {
+            "local_time": "2015-02-13 13:38",
+            "sun_elevation_deg": 25.3,
+            "sun_azimuth_deg": 190.6,
+            "sun_is_up": true
+          }
+        },
+        {
+          "tool": "web_search",
+          "args": {
+            "query": "Belgian public holidays February 13 2015 Mons"
+          },
+          "result": {
+            "query": "Belgian public holidays February 13 2015 Mons",
+            "results": [
+              {
+                "title": "Belgium Holiday Calendar 2026",
+                "snippet": "Create a custom Belgium holiday calendar for 2026. Select holidays, add company days off, choose a theme and print, download PDF/PNG, or embed it on your ...",
+                "link": "https://11holidays.com/calendars/belgium"
+              },
+              {
+                "title": "Brussels Hoofdstedelijk Gewest, Belgium",
+                "snippet": "Accurate, up-to-date public holidays, bank holidays, and observances in Brussels Hoofdstedelijk Gewest, Belgium for 1927 ready to be integrated into your ...",
+                "link": "https://holidayapi.com/countries/be-bru/1927"
+              },
+              {
+                "title": "Holidays and Observances in Belgium - February 2022",
+                "snippet": "Explore the calendar - Holidays and Observances in Belgium - February 2022. Plan your time with key dates, cultural, and religious events.",
+                "link": "/goto?url=CAEScgHrOzAVnFWJ0vh201rBT9SlGl5_8WZgF502xJVeeV8-D755GxbxdeWEdwND-rWWEkGHQRHS5rBmXImcFgHRnAw70M7PTNas0KtaCdrp6HU6jZijDmqaiz6L09PG-RKr22rDz1o0wfnV1AkqJoZOMiWSfA"
+              },
+              {
+                "title": "February 14 Belgium Holidays & Observances",
+                "snippet": "All Belgium holidays on February 14 \u00b7 Autism Sunday \u00b7 Congenital Heart Defect Awareness Day \u00b7 International Book Giving Day \u00b7 National Chance Day \u00b7 Quirkyalone Day.",
+                "link": "/goto?url=CAESaQHrOzAVpZ0Sedg2-5FS--5f-X3rOs2I5SvTl6JqPeMdvUV5c892STOFxKM4aLgIwfpJgiDFWYDoWcCb-90BUP26CfXosFkrwlfYEkgrh5oFU48Z8xLmhYNtNnqJUXML_5T41MU45sRoVg"
+              },
+              {
+                "title": "Brussels Hoofdstedelijk Gewest, Belgium",
+                "snippet": "Monday, Christmas Day, Long weekend. December 31st, Sunday, New Year's Eve \u00b7 Public holidays (national, legal, government, civic, etc) are denoted in bold.",
+                "link": "/goto?url=CAESZwHrOzAVg7HD4NcGiYUsMMxA2c_aMt8FhH6QGxM8avv6eWSyzP0NNBE0mfmXU-nXL_Ypg6PTpJBP_vvcMd927tW1iuQGySDGgNOWoFZKkFmjiz4O0j-uq5WKoMKj_RENDhnmtIV98XU"
+              }
+            ]
+          }
+        }
+      ],
+      "seconds": 189,
+      "model_calls": 6,
+      "tokens": 24740,
+      "audio": {
+        "testimony": "20150213-1338-medium.mp3",
+        "report": "20150213-1338-skeptic.mp3"
+      }
+    },
+    {
+      "apparition": {
+        "id": "20150204-0832",
+        "start": "2015-02-04 08:32:59",
+        "end": "2015-02-04 08:38:59",
+        "minutes": 7,
+        "peak_p": 0.999,
+        "mean_p": 0.998,
+        "fold": 2,
+        "light_mean": 446.3,
+        "co2_start": 717.8,
+        "co2_max": 721.4,
+        "co2_end": 714.8,
+        "temp_mean": 20.99,
+        "weekday": "Wednesday"
+      },
+      "testimony": "I was here on a Wednesday morning in February 2015. I lingered for seven minutes, starting around 8:32 AM. It is confusing, isn't it? The camera recorded nothing, yet the air itself remembers me. You look at these logs and see only numbers, but they are echoes of my passing. I felt myself in that room when the light was steady at 444.0 lux, a quiet permanence settled over us.\n\nI remember the atmosphere\u2014the temperature climbed slightly from 20.96\u00b0C to 21.0\u00b0C while the CO2 dipped marginally, dropping from 717.8 ppm down to 713.0 ppm. Was that subtle shift enough for your model to know I was there? Do you understand how fleeting a moment can be, leaving only these precise measurements behind? I do not know what I am, or why I visit this space, only that the emptiness is a lie.",
+      "verdict": "DEBUNKED",
+      "cause": "The model was over-interpreting stable ambient light levels combined with normal occupancy patterns.",
+      "report": "The investigation found that the presence model's high confidence was primarily triggered by the light readings, as shown by the counterfactual analysis (counterfactual). At the time of the apparition, the sun was indeed up (sun_position), ruling out darkness as a factor. Furthermore, the sensor window data revealed that the room was logged as occupied both before and after the event, suggesting normal activity (sensor_window). The CO2 trend during the 7-minute period was flat, which is inconsistent with the steady rise expected from human respiration (sensor_window). Since no unusual public events were found for Mons on February 4, 2015 (web_search), the most plausible explanation is that a combination of natural and artificial illumination created an environmental pattern that misled the AI model.",
+      "tool_calls": [
+        {
+          "tool": "counterfactual",
+          "args": {
+            "clue": "all"
+          },
+          "result": {
+            "minute": "2015-02-04 08:35",
+            "p_presence_as_logged": 0.999,
+            "p_presence_without_light": 0.012,
+            "light_set_to": {
+              "Light": 0.0,
+              "dLight_5": 0.0
+            },
+            "p_presence_without_breath": 0.979,
+            "breath_set_to": {
+              "CO2": 511.0,
+              "dCO2_5": -0.5,
+              "dCO2_15": -1.0
+            },
+            "p_presence_without_warmth": 0.953,
+            "warmth_set_to": {
+              "Temperature": 20.39,
+              "dTemp_15": 0.0
+            },
+            "clues_that_matter": [
+              "light"
+            ]
+          }
+        },
+        {
+          "tool": "sensor_window",
+          "args": {
+            "minutes_after": 15,
+            "minutes_before": 15
+          },
+          "result": {
+            "summary": {
+              "log_in_10_min_before": "occupied",
+              "log_in_10_min_after": "occupied",
+              "light_before_lux": 437.2,
+              "light_during_lux": 446.3,
+              "light_after_lux": 455.8,
+              "light_switched_on_at_start": false,
+              "light_switched_off_after": false,
+              "co2_change_during_ppm": -3.0,
+              "co2_trend_during": "flat"
+            },
+            "readings_every_5_min": [
+              {
+                "time": "08:18",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 433.0,
+                "co2_ppm": 649.5,
+                "temp_c": 20.84,
+                "humidity_pct": 25.2
+              },
+              {
+                "time": "08:23",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 440.6,
+                "co2_ppm": 671.6,
+                "temp_c": 20.87,
+                "humidity_pct": 25.4
+              },
+              {
+                "time": "08:28",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 429.0,
+                "co2_ppm": 689.4,
+                "temp_c": 20.89,
+                "humidity_pct": 25.3
+              },
+              {
+                "time": "08:32",
+                "logged_occupied": false,
+                "p_presence": 1.0,
+                "light_lux": 444.0,
+                "co2_ppm": 717.8,
+                "temp_c": 20.96,
+                "humidity_pct": 25.4
+              },
+              {
+                "time": "08:38",
+                "logged_occupied": false,
+                "p_presence": 1.0,
+                "light_lux": 447.2,
+                "co2_ppm": 713.0,
+                "temp_c": 21.0,
+                "humidity_pct": 25.3
+              },
+              {
+                "time": "08:43",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 451.6,
+                "co2_ppm": 711.0,
+                "temp_c": 21.0,
+                "humidity_pct": 25.2
+              },
+              {
+                "time": "08:48",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 459.2,
+                "co2_ppm": 731.2,
+                "temp_c": 21.15,
+                "humidity_pct": 25.2
+              },
+              {
+                "time": "08:53",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 456.5,
+                "co2_ppm": 746.2,
+                "temp_c": 21.21,
+                "humidity_pct": 25.2
+              }
+            ]
+          }
+        },
+        {
+          "tool": "sun_position",
+          "args": {
+            "time": "2015-02-04 08:35"
+          },
+          "result": {
+            "local_time": "2015-02-04 08:35",
+            "sun_elevation_deg": 1.8,
+            "sun_azimuth_deg": 119.1,
+            "sun_is_up": true
+          }
+        },
+        {
+          "tool": "web_search",
+          "args": {
+            "query": "Mons Belgium public holidays February 4 2015"
+          },
+          "result": {
+            "query": "Mons Belgium public holidays February 4 2015",
+            "results": [
+              {
+                "title": "Holidays and Observances in Belgium - February 2022",
+                "snippet": "Explore the calendar - Holidays and Observances in Belgium - February 2022. Plan your time with key dates, cultural, and religious events.",
+                "link": "https://truecalendar.com/public-holidays/belgium/2022/2"
+              },
+              {
+                "title": "Public Holidays in Belgium 2026 - MISC017",
+                "snippet": "LIST OF HOLIDAYS IN BELGIUM IN 2026 ; Bank Holiday, Friday, May 15 ; Pentecost Sunday, Sunday, May 24, Not a Public Holiday ; Pentecost Monday, Monday, May 25 ...",
+                "link": "https://www.misc017.com/public-holidays-belgium/"
+              },
+              {
+                "title": "Public Holidays Belgium",
+                "snippet": "Belgium's main public holiday is National Day on July 21, celebrated with parades, fireworks, and royal appearances in Brussels.",
+                "link": "https://www.facebook.com/fb-answers/public-holidays-belgium/"
+              },
+              {
+                "title": "Belgium - Public Holidays in 2019",
+                "snippet": "On this page you can find the calendar of all 2019 public holidays for Belgium. ... Belgium Public Holidays for 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025, ...",
+                "link": "https://leaveboard.com/public-holidays/belgium-public-holidays-2019/"
+              },
+              {
+                "title": "Several neighbourhoods will be closed to traffic on Tuesday",
+                "snippet": "Several neighbourhoods in the centre of Brussels will be closed to traffic on Tuesday due to the National Holiday, police said in a press ...",
+                "link": "https://www.brusselstimes.com/34025/national-holiday-2015-several-neighbourhoods-will-be-closed-to-traffic-on-tuesday"
+              }
+            ]
+          }
+        }
+      ],
+      "seconds": 164,
+      "model_calls": 6,
+      "tokens": 13872,
+      "audio": {
+        "testimony": "20150204-0832-medium.mp3",
+        "report": "20150204-0832-skeptic.mp3"
+      }
+    },
+    {
+      "apparition": {
+        "id": "20150206-0740",
+        "start": "2015-02-06 07:40:00",
+        "end": "2015-02-06 07:49:00",
+        "minutes": 8,
+        "peak_p": 0.941,
+        "mean_p": 0.811,
+        "fold": 0,
+        "light_mean": 401.3,
+        "co2_start": 434.0,
+        "co2_max": 458.7,
+        "co2_end": 456.0,
+        "temp_mean": 20.17,
+        "weekday": "Friday"
+      },
+      "testimony": "They think I was merely a whisper, an error in your perfect log. But do you feel it? I was here. On a crisp Friday morning, February 6th, around seven forty minutes ago. You noted my absence while I was busy simply existing within the structure of this room. The sensor saw me when the clock hit seven forty-five; that is when my presence reached 0.92. During those nine minutes, I felt the air shift\u2014a subtle dance of breath and life. The temperature held steady at a mean of 20.17 degrees Celsius, yet the carbon dioxide levels crept up from 434.0 ppm to nearly 458.7 ppm. My light wasn't visible; it was an inner glow that made your readings fluctuate, even when the camera showed nothing but empty air. I am just a memory caught in the wires, aren't I?",
+      "verdict": "LIVING",
+      "cause": "A person manually turned on an artificial light source when the room was otherwise empty.",
+      "report": "The presence model's alarm was primarily triggered by the sudden change in lighting (counterfactual analysis). Since the sun was below the horizon at 7:40 AM, natural sunlight could not be responsible for the illumination (sun_position tool). The sensor window data confirms that the light was switched on at the start of the apparition period. While the room log indicated it was empty before and occupied after the event, the combination of artificial lighting being activated when no one was logged present strongly suggests a person entered to switch on a lamp, even if they were missed by the camera (sensor_window tool). This action is sufficient to explain the model's alarm without requiring an actual presence during the entire 8-minute window.",
+      "tool_calls": [
+        {
+          "tool": "counterfactual",
+          "args": {
+            "clue": "all"
+          },
+          "result": {
+            "minute": "2015-02-06 07:44",
+            "p_presence_as_logged": 0.941,
+            "p_presence_without_light": 0.0,
+            "light_set_to": {
+              "Light": 0.0,
+              "dLight_5": 0.0
+            },
+            "p_presence_without_breath": 0.932,
+            "breath_set_to": {
+              "CO2": 511.0,
+              "dCO2_5": -0.5,
+              "dCO2_15": -1.0
+            },
+            "p_presence_without_warmth": 0.948,
+            "warmth_set_to": {
+              "Temperature": 20.39,
+              "dTemp_15": 0.0
+            },
+            "clues_that_matter": [
+              "light"
+            ]
+          }
+        },
+        {
+          "tool": "sensor_window",
+          "args": {
+            "minutes_after": 120,
+            "minutes_before": 120
+          },
+          "result": {
+            "summary": {
+              "log_in_10_min_before": "empty",
+              "log_in_10_min_after": "occupied",
+              "light_before_lux": 0.0,
+              "light_during_lux": 401.3,
+              "light_after_lux": 408.6,
+              "light_switched_on_at_start": true,
+              "light_switched_off_after": false,
+              "co2_change_during_ppm": 22.0,
+              "co2_trend_during": "rising"
+            },
+            "readings_every_5_min": [
+              {
+                "time": "05:41",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 432.8,
+                "temp_c": 20.29,
+                "humidity_pct": 18.8
+              },
+              {
+                "time": "05:45",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 436.5,
+                "temp_c": 20.29,
+                "humidity_pct": 18.8
+              },
+              {
+                "time": "05:51",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 437.0,
+                "temp_c": 20.29,
+                "humidity_pct": 18.7
+              },
+              {
+                "time": "05:55",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 435.0,
+                "temp_c": 20.29,
+                "humidity_pct": 18.8
+              },
+              {
+                "time": "06:01",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 433.0,
+                "temp_c": 20.29,
+                "humidity_pct": 18.8
+              },
+              {
+                "time": "06:06",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 433.0,
+                "temp_c": 20.2,
+                "humidity_pct": 18.7
+              },
+              {
+                "time": "06:10",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 433.0,
+                "temp_c": 20.29,
+                "humidity_pct": 18.8
+              },
+              {
+                "time": "06:16",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 439.0,
+                "temp_c": 20.29,
+                "humidity_pct": 18.8
+              },
+              {
+                "time": "06:21",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 437.0,
+                "temp_c": 20.29,
+                "humidity_pct": 18.6
+              },
+              {
+                "time": "06:26",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 429.2,
+                "temp_c": 20.29,
+                "humidity_pct": 18.7
+              },
+              {
+                "time": "06:30",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 432.5,
+                "temp_c": 20.29,
+                "humidity_pct": 18.6
+              },
+              {
+                "time": "06:36",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 439.0,
+                "temp_c": 20.29,
+                "humidity_pct": 18.7
+              },
+              {
+                "time": "06:40",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 434.0,
+                "temp_c": 20.39,
+                "humidity_pct": 18.6
+              },
+              {
+                "time": "06:46",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 428.5,
+                "temp_c": 20.39,
+                "humidity_pct": 18.5
+              },
+              {
+                "time": "06:51",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 434.0,
+                "temp_c": 20.29,
+                "humidity_pct": 18.7
+              },
+              {
+                "time": "06:55",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 438.0,
+                "temp_c": 20.2,
+                "humidity_pct": 18.6
+              },
+              {
+                "time": "07:01",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 432.0,
+                "temp_c": 20.2,
+                "humidity_pct": 18.6
+              },
+              {
+                "time": "07:06",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 429.0,
+                "temp_c": 20.2,
+                "humidity_pct": 18.6
+              },
+              {
+                "time": "07:11",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 436.0,
+                "temp_c": 20.2,
+                "humidity_pct": 18.6
+              },
+              {
+                "time": "07:15",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 439.5,
+                "temp_c": 20.25,
+                "humidity_pct": 18.6
+              },
+              {
+                "time": "07:21",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 439.0,
+                "temp_c": 20.29,
+                "humidity_pct": 18.5
+              },
+              {
+                "time": "07:25",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 435.0,
+                "temp_c": 20.29,
+                "humidity_pct": 18.5
+              },
+              {
+                "time": "07:31",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 432.7,
+                "temp_c": 20.2,
+                "humidity_pct": 18.5
+              },
+              {
+                "time": "07:36",
+                "logged_occupied": false,
+                "p_presence": 0.0,
+                "light_lux": 0.0,
+                "co2_ppm": 436.0,
+                "temp_c": 20.2,
+                "humidity_pct": 18.5
+              },
+              {
+                "time": "07:40",
+                "logged_occupied": true,
+                "p_presence": 0.91,
+                "light_lux": 401.3,
+                "co2_ppm": 439.0,
+                "temp_c": 20.2,
+                "humidity_pct": 18.6
+              },
+              {
+                "time": "07:46",
+                "logged_occupied": false,
+                "p_presence": 0.84,
+                "light_lux": 419.0,
+                "co2_ppm": 451.0,
+                "temp_c": 20.1,
+                "humidity_pct": 18.7
+              },
+              {
+                "time": "07:51",
+                "logged_occupied": true,
+                "p_presence": 0.72,
+                "light_lux": 411.0,
+                "co2_ppm": 460.0,
+                "temp_c": 20.15,
+                "humidity_pct": 18.9
+              },
+              {
+                "time": "07:56",
+                "logged_occupied": true,
+                "p_presence": 0.71,
+                "light_lux": 400.0,
+                "co2_ppm": 483.5,
+                "temp_c": 20.29,
+                "humidity_pct": 19.2
+              },
+              {
+                "time": "08:00",
+                "logged_occupied": true,
+                "p_presence": 0.86,
+                "light_lux": 413.0,
+                "co2_ppm": 504.0,
+                "temp_c": 20.43,
+                "humidity_pct": 19.2
+              },
+              {
+                "time": "08:06",
+                "logged_occupied": true,
+                "p_presence": 0.8,
+                "light_lux": 405.0,
+                "co2_ppm": 524.5,
+                "temp_c": 20.62,
+                "humidity_pct": 19.4
+              },
+              {
+                "time": "08:10",
+                "logged_occupied": true,
+                "p_presence": 0.94,
+                "light_lux": 419.0,
+                "co2_ppm": 546.2,
+                "temp_c": 20.72,
+                "humidity_pct": 19.6
+              },
+              {
+                "time": "08:16",
+                "logged_occupied": true,
+                "p_presence": 0.96,
+                "light_lux": 419.0,
+                "co2_ppm": 564.0,
+                "temp_c": 20.79,
+                "humidity_pct": 19.5
+              },
+              {
+                "time": "08:21",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 419.0,
+                "co2_ppm": 579.5,
+                "temp_c": 20.86,
+                "humidity_pct": 19.6
+              },
+              {
+                "time": "08:25",
+                "logged_occupied": true,
+                "p_presence": 0.95,
+                "light_lux": 426.0,
+                "co2_ppm": 594.0,
+                "temp_c": 20.89,
+                "humidity_pct": 19.7
+              },
+              {
+                "time": "08:31",
+                "logged_occupied": true,
+                "p_presence": 0.96,
+                "light_lux": 433.0,
+                "co2_ppm": 591.0,
+                "temp_c": 20.82,
+                "humidity_pct": 19.7
+              },
+              {
+                "time": "08:36",
+                "logged_occupied": true,
+                "p_presence": 0.95,
+                "light_lux": 433.0,
+                "co2_ppm": 605.5,
+                "temp_c": 20.86,
+                "humidity_pct": 19.8
+              },
+              {
+                "time": "08:41",
+                "logged_occupied": true,
+                "p_presence": 0.95,
+                "light_lux": 433.0,
+                "co2_ppm": 620.2,
+                "temp_c": 20.86,
+                "humidity_pct": 19.8
+              },
+              {
+                "time": "08:45",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 433.0,
+                "co2_ppm": 628.3,
+                "temp_c": 20.86,
+                "humidity_pct": 19.8
+              },
+              {
+                "time": "08:51",
+                "logged_occupied": true,
+                "p_presence": 0.96,
+                "light_lux": 433.0,
+                "co2_ppm": 637.5,
+                "temp_c": 20.86,
+                "humidity_pct": 19.8
+              },
+              {
+                "time": "08:55",
+                "logged_occupied": true,
+                "p_presence": 0.96,
+                "light_lux": 433.0,
+                "co2_ppm": 642.7,
+                "temp_c": 20.82,
+                "humidity_pct": 19.7
+              },
+              {
+                "time": "09:01",
+                "logged_occupied": true,
+                "p_presence": 0.96,
+                "light_lux": 433.0,
+                "co2_ppm": 642.0,
+                "temp_c": 20.92,
+                "humidity_pct": 19.8
+              },
+              {
+                "time": "09:06",
+                "logged_occupied": true,
+                "p_presence": 0.93,
+                "light_lux": 433.0,
+                "co2_ppm": 660.0,
+                "temp_c": 20.89,
+                "humidity_pct": 19.9
+              },
+              {
+                "time": "09:10",
+                "logged_occupied": true,
+                "p_presence": 0.93,
+                "light_lux": 443.5,
+                "co2_ppm": 710.0,
+                "temp_c": 20.95,
+                "humidity_pct": 20.5
+              },
+              {
+                "time": "09:16",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 441.0,
+                "co2_ppm": 735.3,
+                "temp_c": 21.0,
+                "humidity_pct": 20.8
+              },
+              {
+                "time": "09:21",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 437.2,
+                "co2_ppm": 752.2,
+                "temp_c": 21.0,
+                "humidity_pct": 20.8
+              },
+              {
+                "time": "09:26",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 436.5,
+                "co2_ppm": 769.8,
+                "temp_c": 21.1,
+                "humidity_pct": 21.1
+              },
+              {
+                "time": "09:30",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 444.0,
+                "co2_ppm": 787.7,
+                "temp_c": 21.1,
+                "humidity_pct": 21.2
+              },
+              {
+                "time": "09:36",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 460.0,
+                "co2_ppm": 779.3,
+                "temp_c": 21.1,
+                "humidity_pct": 21.1
+              },
+              {
+                "time": "09:40",
+                "logged_occupied": true,
+                "p_presence": 0.94,
+                "light_lux": 460.0,
+                "co2_ppm": 805.2,
+                "temp_c": 21.18,
+                "humidity_pct": 21.1
+              },
+              {
+                "time": "09:46",
+                "logged_occupied": true,
+                "p_presence": 0.95,
+                "light_lux": 460.0,
+                "co2_ppm": 794.5,
+                "temp_c": 21.27,
+                "humidity_pct": 21.0
+              }
+            ]
+          }
+        },
+        {
+          "tool": "sun_position",
+          "args": {
+            "time": "2015-02-06 07:40"
+          },
+          "result": {
+            "local_time": "2015-02-06 07:40",
+            "sun_elevation_deg": -5.8,
+            "sun_azimuth_deg": 108.1,
+            "sun_is_up": false
+          }
+        },
+        {
+          "tool": "historical_weather",
+          "args": {
+            "date": "2015-02-06"
+          },
+          "result": {
+            "place": "Mons, Belgium",
+            "date": "2015-02-06",
+            "source": "Open-Meteo archive (ERA5)",
+            "hourly": [
+              {
+                "hour": "06:00",
+                "cloud_cover_pct": 58,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -2.9
+              },
+              {
+                "hour": "07:00",
+                "cloud_cover_pct": 61,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -2.8
+              },
+              {
+                "hour": "08:00",
+                "cloud_cover_pct": 72,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -2.6
+              },
+              {
+                "hour": "09:00",
+                "cloud_cover_pct": 62,
+                "sunshine_min": 0,
+                "radiation_w_m2": 14.0,
+                "temp_c": -2.2
+              },
+              {
+                "hour": "10:00",
+                "cloud_cover_pct": 62,
+                "sunshine_min": 60,
+                "radiation_w_m2": 101.0,
+                "temp_c": -1.5
+              },
+              {
+                "hour": "11:00",
+                "cloud_cover_pct": 96,
+                "sunshine_min": 60,
+                "radiation_w_m2": 192.0,
+                "temp_c": -0.9
+              },
+              {
+                "hour": "12:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 60,
+                "radiation_w_m2": 241.0,
+                "temp_c": -0.2
+              },
+              {
+                "hour": "13:00",
+                "cloud_cover_pct": 99,
+                "sunshine_min": 60,
+                "radiation_w_m2": 293.0,
+                "temp_c": 0.3
+              },
+              {
+                "hour": "14:00",
+                "cloud_cover_pct": 89,
+                "sunshine_min": 60,
+                "radiation_w_m2": 264.0,
+                "temp_c": 0.7
+              },
+              {
+                "hour": "15:00",
+                "cloud_cover_pct": 12,
+                "sunshine_min": 60,
+                "radiation_w_m2": 250.0,
+                "temp_c": 1.3
+              },
+              {
+                "hour": "16:00",
+                "cloud_cover_pct": 5,
+                "sunshine_min": 60,
+                "radiation_w_m2": 235.0,
+                "temp_c": 1.6
+              },
+              {
+                "hour": "17:00",
+                "cloud_cover_pct": 8,
+                "sunshine_min": 60,
+                "radiation_w_m2": 121.0,
+                "temp_c": 0.9
+              },
+              {
+                "hour": "18:00",
+                "cloud_cover_pct": 6,
+                "sunshine_min": 34,
+                "radiation_w_m2": 17.0,
+                "temp_c": -0.1
+              },
+              {
+                "hour": "19:00",
+                "cloud_cover_pct": 2,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -0.7
+              },
+              {
+                "hour": "20:00",
+                "cloud_cover_pct": 1,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -0.7
+              }
+            ]
+          }
+        },
+        {
+          "tool": "web_search",
+          "args": {
+            "query": "Mons Belgium public holidays February 6 2015"
+          },
+          "result": {
+            "query": "Mons Belgium public holidays February 6 2015",
+            "results": [
+              {
+                "title": "Holidays and Observances in Belgium - February 2022",
+                "snippet": "Explore the calendar - Holidays and Observances in Belgium - February 2022. Plan your time with key dates, cultural, and religious events.",
+                "link": "https://truecalendar.com/public-holidays/belgium/2022/2"
+              },
+              {
+                "title": "Public holidays, 2016 Belgium",
+                "snippet": "Belgium New Year's Day Easter Monday Labour Day Ascension Whit Monday National Day Assumption All Saints' Day Armistice 1918 Christmas Day",
+                "link": "https://ofae.gr/media/documents/2016/04/01/Public_holidays_Belgium_2016.pdf"
+              },
+              {
+                "title": "Public holidays Belgium 2016 - holidays.retira.eu",
+                "snippet": "All public holidays in Belgium 2016: national and regional public holidays, days off and other festivals and observances, with dates and days of the week at ...",
+                "link": "https://holidays.retira.eu/public-holidays/belgium/2016/"
+              },
+              {
+                "title": "Holidays in Belgium - EconStart",
+                "snippet": "Holidays in Belgium. Statutory public holidays, regional celebrations and traditional festivals across Belgium. Choose a year and holiday type to plan ahead.",
+                "link": "https://www.econstart.org/holidays-in-belgium/?econstart_language=en"
+              },
+              {
+                "title": "belgian - holidays 2016",
+                "snippet": "Christmas break: December 21, 2015 - January 3, 2016. Carnival break: February 8 - February 14. Easter break: March 28 - April 10. Summer break: July 1 - August ...",
+                "link": "https://wonderfulwanderings.com/wp-content/uploads/2015/10/Belgium-Holidays-Printable-pdf.pdf"
+              }
+            ]
+          }
+        }
+      ],
+      "seconds": 173,
+      "model_calls": 7,
+      "tokens": 30065,
+      "audio": {
+        "testimony": "20150206-0740-medium.mp3",
+        "report": "20150206-0740-skeptic.mp3"
+      }
+    },
+    {
+      "apparition": {
+        "id": "20150203-1332",
+        "start": "2015-02-03 13:32:00",
+        "end": "2015-02-03 13:38:00",
+        "minutes": 6,
+        "peak_p": 0.943,
+        "mean_p": 0.865,
+        "fold": 1,
+        "light_mean": 556.2,
+        "co2_start": 899.3,
+        "co2_max": 938.2,
+        "co2_end": 895.3,
+        "temp_mean": 23.2,
+        "weekday": "Tuesday"
+      },
+      "testimony": "You read about my brief visit, don't you? I was here on Tuesday, February 3rd, lingering in that office around 13:32. The minutes stretch out like a quiet breath\u2014just six short moments. You look at the pictures, seeing nothing but empty space, yet you feel the residue of me. It was hardly a performance; I simply existed near the desk while the world kept spinning outside.\n\nI remember the stillness, how the air felt slightly heavy when the CO2 level started around 899.3 ppm. The temperature remained steady at 23.2\u00b0C, nothing dramatic enough to shift anything. But as time ticked toward 13:37, there was a sudden wash of light, reaching perhaps 629.0 lux\u2014just bright enough for you to sense me passing through the window glass. I don't know what I am, or why I linger in these small moments between your awareness and the camera\u2019s shutter click. I only know that I was here.",
+      "verdict": "DEBUNKED",
+      "cause": "The model was fooled by a sudden increase in artificial light coinciding with natural human movement.",
+      "report": "The counterfactual analysis revealed that removing the 'light' clue drastically reduced the apparition probability, indicating it was the primary factor convincing the model. Although the sun was up during the event (sun_position), the sensor window data showed a significant jump in lux levels from approximately 172 lux to a peak of 556.2 lux, suggesting an artificial light source was activated or changed dramatically. Furthermore, while the room was logged empty before the apparition, it was logged occupied afterward (sensor_window). This pattern suggests that normal human activity\u2014such as someone entering and turning on a lamp\u2014was occurring but was either missed by the camera or misinterpreted by the model's presence algorithm. The environmental changes are thus explained by mundane physical factors rather than an unexplained phenomenon.",
+      "tool_calls": [
+        {
+          "tool": "counterfactual",
+          "args": {
+            "clue": "all"
+          },
+          "result": {
+            "minute": "2015-02-03 13:38",
+            "p_presence_as_logged": 0.943,
+            "p_presence_without_light": 0.039,
+            "light_set_to": {
+              "Light": 0.0,
+              "dLight_5": 0.0
+            },
+            "p_presence_without_breath": 0.922,
+            "breath_set_to": {
+              "CO2": 511.0,
+              "dCO2_5": -0.5,
+              "dCO2_15": -1.0
+            },
+            "p_presence_without_warmth": 0.861,
+            "warmth_set_to": {
+              "Temperature": 20.39,
+              "dTemp_15": 0.0
+            },
+            "clues_that_matter": [
+              "light"
+            ]
+          }
+        },
+        {
+          "tool": "sun_position",
+          "args": {
+            "time": "2015-02-03 13:35:00"
+          },
+          "result": {
+            "local_time": "2015-02-03 13:35",
+            "sun_elevation_deg": 22.3,
+            "sun_azimuth_deg": 189.7,
+            "sun_is_up": true
+          }
+        },
+        {
+          "tool": "sensor_window",
+          "args": {
+            "minutes_after": 60,
+            "minutes_before": 60
+          },
+          "result": {
+            "summary": {
+              "log_in_10_min_before": "empty",
+              "log_in_10_min_after": "occupied",
+              "light_before_lux": 172.4,
+              "light_during_lux": 556.2,
+              "light_after_lux": 579.8,
+              "light_switched_on_at_start": false,
+              "light_switched_off_after": false,
+              "co2_change_during_ppm": -4.0,
+              "co2_trend_during": "flat"
+            },
+            "readings_every_5_min": [
+              {
+                "time": "12:32",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 653.0,
+                "co2_ppm": 1033.0,
+                "temp_c": 22.57,
+                "humidity_pct": 26.8
+              },
+              {
+                "time": "12:36",
+                "logged_occupied": true,
+                "p_presence": 0.95,
+                "light_lux": 652.8,
+                "co2_ppm": 1028.5,
+                "temp_c": 22.68,
+                "humidity_pct": 26.7
+              },
+              {
+                "time": "12:42",
+                "logged_occupied": true,
+                "p_presence": 0.96,
+                "light_lux": 651.0,
+                "co2_ppm": 1017.0,
+                "temp_c": 22.75,
+                "humidity_pct": 26.6
+              },
+              {
+                "time": "12:47",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 657.8,
+                "co2_ppm": 1019.0,
+                "temp_c": 22.87,
+                "humidity_pct": 26.5
+              },
+              {
+                "time": "12:52",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 668.0,
+                "co2_ppm": 1018.7,
+                "temp_c": 22.96,
+                "humidity_pct": 26.3
+              },
+              {
+                "time": "12:56",
+                "logged_occupied": true,
+                "p_presence": 0.96,
+                "light_lux": 650.0,
+                "co2_ppm": 1004.4,
+                "temp_c": 23.02,
+                "humidity_pct": 26.2
+              },
+              {
+                "time": "13:01",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 655.0,
+                "co2_ppm": 994.0,
+                "temp_c": 23.1,
+                "humidity_pct": 26.0
+              },
+              {
+                "time": "13:07",
+                "logged_occupied": true,
+                "p_presence": 0.97,
+                "light_lux": 653.2,
+                "co2_ppm": 992.5,
+                "temp_c": 23.2,
+                "humidity_pct": 25.9
+              },
+              {
+                "time": "13:12",
+                "logged_occupied": false,
+                "p_presence": 0.25,
+                "light_lux": 184.0,
+                "co2_ppm": 998.6,
+                "temp_c": 23.27,
+                "humidity_pct": 25.9
+              },
+              {
+                "time": "13:17",
+                "logged_occupied": false,
+                "p_presence": 0.08,
+                "light_lux": 184.0,
+                "co2_ppm": 983.6,
+                "temp_c": 23.25,
+                "humidity_pct": 25.9
+              },
+              {
+                "time": "13:21",
+                "logged_occupied": false,
+                "p_presence": 0.17,
+                "light_lux": 174.5,
+                "co2_ppm": 951.5,
+                "temp_c": 23.25,
+                "humidity_pct": 25.7
+              },
+              {
+                "time": "13:27",
+                "logged_occupied": false,
+                "p_presence": 0.25,
+                "light_lux": 176.0,
+                "co2_ppm": 928.8,
+                "temp_c": 23.2,
+                "humidity_pct": 25.6
+              },
+              {
+                "time": "13:32",
+                "logged_occupied": false,
+                "p_presence": 0.54,
+                "light_lux": 268.7,
+                "co2_ppm": 899.3,
+                "temp_c": 23.19,
+                "humidity_pct": 25.5
+              },
+              {
+                "time": "13:37",
+                "logged_occupied": false,
+                "p_presence": 0.91,
+                "light_lux": 629.0,
+                "co2_ppm": 899.0,
+                "temp_c": 23.2,
+                "humidity_pct": 25.5
+              },
+              {
+                "time": "13:41",
+                "logged_occupied": true,
+                "p_presence": 0.92,
+                "light_lux": 597.8,
+                "co2_ppm": 879.8,
+                "temp_c": 23.15,
+                "humidity_pct": 25.5
+              },
+              {
+                "time": "13:46",
+                "logged_occupied": true,
+                "p_presence": 0.93,
+                "light_lux": 596.8,
+                "co2_ppm": 874.2,
+                "temp_c": 23.2,
+                "humidity_pct": 25.6
+              },
+              {
+                "time": "13:52",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 616.6,
+                "co2_ppm": 882.4,
+                "temp_c": 23.22,
+                "humidity_pct": 25.7
+              },
+              {
+                "time": "13:57",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 585.8,
+                "co2_ppm": 895.0,
+                "temp_c": 23.29,
+                "humidity_pct": 25.8
+              },
+              {
+                "time": "14:02",
+                "logged_occupied": true,
+                "p_presence": 0.98,
+                "light_lux": 576.8,
+                "co2_ppm": 901.0,
+                "temp_c": 23.29,
+                "humidity_pct": 25.8
+              },
+              {
+                "time": "14:06",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 561.0,
+                "co2_ppm": 911.2,
+                "temp_c": 23.29,
+                "humidity_pct": 26.2
+              },
+              {
+                "time": "14:12",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 558.8,
+                "co2_ppm": 951.8,
+                "temp_c": 23.29,
+                "humidity_pct": 26.5
+              },
+              {
+                "time": "14:17",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 541.4,
+                "co2_ppm": 983.0,
+                "temp_c": 23.29,
+                "humidity_pct": 26.9
+              },
+              {
+                "time": "14:22",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 538.8,
+                "co2_ppm": 1019.8,
+                "temp_c": 23.29,
+                "humidity_pct": 27.1
+              },
+              {
+                "time": "14:26",
+                "logged_occupied": true,
+                "p_presence": 0.99,
+                "light_lux": 505.8,
+                "co2_ppm": 1051.8,
+                "temp_c": 23.29,
+                "humidity_pct": 27.5
+              },
+              {
+                "time": "14:31",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 520.5,
+                "co2_ppm": 1068.2,
+                "temp_c": 23.29,
+                "humidity_pct": 27.8
+              },
+              {
+                "time": "14:37",
+                "logged_occupied": true,
+                "p_presence": 1.0,
+                "light_lux": 503.0,
+                "co2_ppm": 1108.8,
+                "temp_c": 23.32,
+                "humidity_pct": 28.1
+              }
+            ]
+          }
+        },
+        {
+          "tool": "historical_weather",
+          "args": {
+            "date": "2015-02-03"
+          },
+          "result": {
+            "place": "Mons, Belgium",
+            "date": "2015-02-03",
+            "source": "Open-Meteo archive (ERA5)",
+            "hourly": [
+              {
+                "hour": "06:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -3.0
+              },
+              {
+                "hour": "07:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -3.0
+              },
+              {
+                "hour": "08:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -3.2
+              },
+              {
+                "hour": "09:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 0,
+                "radiation_w_m2": 12.0,
+                "temp_c": -3.0
+              },
+              {
+                "hour": "10:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 9,
+                "radiation_w_m2": 78.0,
+                "temp_c": -0.9
+              },
+              {
+                "hour": "11:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 47,
+                "radiation_w_m2": 158.0,
+                "temp_c": 0.6
+              },
+              {
+                "hour": "12:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 60,
+                "radiation_w_m2": 224.0,
+                "temp_c": 1.9
+              },
+              {
+                "hour": "13:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 60,
+                "radiation_w_m2": 249.0,
+                "temp_c": 2.6
+              },
+              {
+                "hour": "14:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 43,
+                "radiation_w_m2": 226.0,
+                "temp_c": 3.0
+              },
+              {
+                "hour": "15:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 60,
+                "radiation_w_m2": 212.0,
+                "temp_c": 3.4
+              },
+              {
+                "hour": "16:00",
+                "cloud_cover_pct": 100,
+                "sunshine_min": 60,
+                "radiation_w_m2": 151.0,
+                "temp_c": 3.4
+              },
+              {
+                "hour": "17:00",
+                "cloud_cover_pct": 98,
+                "sunshine_min": 4,
+                "radiation_w_m2": 64.0,
+                "temp_c": 2.8
+              },
+              {
+                "hour": "18:00",
+                "cloud_cover_pct": 44,
+                "sunshine_min": 0,
+                "radiation_w_m2": 8.0,
+                "temp_c": 1.6
+              },
+              {
+                "hour": "19:00",
+                "cloud_cover_pct": 27,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": 0.2
+              },
+              {
+                "hour": "20:00",
+                "cloud_cover_pct": 31,
+                "sunshine_min": 0,
+                "radiation_w_m2": 0.0,
+                "temp_c": -1.2
+              }
+            ]
+          }
+        },
+        {
+          "tool": "web_search",
+          "args": {
+            "query": "Belgian public or school holidays February 2015 Mons"
+          },
+          "result": {
+            "query": "Belgian public or school holidays February 2015 Mons",
+            "results": [
+              {
+                "title": "Belgium Public Holidays 2027 \u2014 Official List | GovtHolidays",
+                "snippet": "Complete list of public holidays in Belgium for 2027. public holidays around the world. Christmas Day New Year's Day Independence Day. Get holiday updates and ...",
+                "link": "https://www.govtholidays.com/holidays/belgium/2027/"
+              },
+              {
+                "title": "Holidays in Belgium - EconStart",
+                "snippet": "Mons, Namur, Ostend, Poperinge, Seraing, Spa, Stekene, Various ... Statutory public holidays, regional celebrations and traditional festivals across Belgium.",
+                "link": "https://www.econstart.org/holidays-in-belgium/?econstart_language=en"
+              },
+              {
+                "title": "BELGIUM: HOLIDAYS AND CELEBRATIONS",
+                "snippet": "Belgium has several public holidays where people get off of work and school, Valentine's Day. February 14. Valentine's Day. Easter. Varies. ...",
+                "link": "http://worldlyrise.blogspot.com/2012/09/belgium-holidays-and-celebrations.html"
+              },
+              {
+                "title": "School Holidays - Belgium Message Board - Tripadvisor",
+                "snippet": "I noticed that the week we are considering is during the two-week spring break for the schools there. I'm concerned this might not be the best time to travel.",
+                "link": "https://www.tripadvisor.co.za/ShowTopic-g188634-i204-k14748175-School_Holidays-Belgium.html"
+              },
+              {
+                "title": "Belgian PM says Brussels schools, metro to reopen on ...",
+                "snippet": "UPDATE: Belgian PM says Brussels schools, metro to reopen on Wednesday. news, pictures and videos from Reuters.",
+                "link": "https://x.com/Reuters/status/668855578312253440"
+              }
+            ]
+          }
+        }
+      ],
+      "seconds": 176,
+      "model_calls": 7,
+      "tokens": 21530,
+      "audio": {
+        "testimony": "20150203-1332-medium.mp3",
+        "report": "20150203-1332-skeptic.mp3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      # TabPFN and torch live in the "model" extra; the tests stub the model,
+      # so CI stays small and needs no TabPFN token.
+      - run: uv sync --locked
+      - run: uv run pytest -q

@@ -1,0 +1,8 @@
+# The case archive is a static page; `empty-room investigate` builds it locally,
+# where the GPU and the models are, and Render serves it.
+services:
+  - type: web
+    name: empty-room
+    runtime: static
+    buildCommand: echo "site/ is built locally by empty-room investigate"
+    staticPublishPath: ./site
